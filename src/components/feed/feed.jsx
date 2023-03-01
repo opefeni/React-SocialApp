@@ -1,5 +1,5 @@
-import Shared from '../shared/shared'
-import Post from '../post/post'
+import Shared from '../shared/Shared'
+import Post from '../post/Post'
 import './feed.css'
 
 export default function Feed() {
