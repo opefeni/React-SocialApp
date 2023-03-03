@@ -1,6 +1,6 @@
-import Feed from "../../components/feed/feed";
-import LeftBar from "../../components/leftbar/leftbar";
-import RightBar from "../../components/rightbar/rightbar";
+import Feed from "../../components/feed/Feed";
+import LeftBar from "../../components/leftbar/Leftbar";
+import RightBar from "../../components/rightbar/Rightbar";
 import Topbar from "../../components/topbar/Topbar";
 import './home.css'
 
