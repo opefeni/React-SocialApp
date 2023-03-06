@@ -1,5 +1,7 @@
 
 import { Bookmark, Chat, Event, Group, HelpOutline, RssFeed, School, VideoCall, WorkOutline } from '@mui/icons-material';
+import { Users } from '../../dummyData';
+import { LeftbarFriend } from '../leftbarFriends/LeftbarFriend';
 import './leftbar.css'
 
 export default function LeftBar() {
@@ -47,35 +49,12 @@ export default function LeftBar() {
                     <button className='leftbarButton'> Show More</button>
                     <hr  className='leftbarHr'></hr>
                     <ul className="leftbarFriendList">
-                            <li className="leftbarFriend">
-                                <img src="/assets/person/2.jpeg" alt="" className="leftbarFriendImg" />
-                                <span className="leftbarFriendName"> Joe Doe</span>
-                            </li>
-                            <li className="leftbarFriend">
-                                <img src="/assets/person/3.jpeg" alt="" className="leftbarFriendImg" />
-                                <span className="leftbarFriendName"> Charles Glass</span>
-                            </li>
-                            <li className="leftbarFriend">
-                                <img src="/assets/person/4.jpeg" alt="" className="leftbarFriendImg" />
-                                <span className="leftbarFriendName"> Milky Williams</span>
-                            </li>
-                            <li className="leftbarFriend">
-                                <img src="/assets/person/5.jpeg" alt="" className="leftbarFriendImg" />
-                                <span className="leftbarFriendName"> Brad Ford</span>
-                            </li>
-                            <li className="leftbarFriend">
-                                <img src="/assets/person/6.jpeg" alt="" className="leftbarFriendImg" />
-                                <span className="leftbarFriendName"> Clone Bridge</span>
-                            </li>
-                            <li className="leftbarFriend">
-                                <img src="/assets/person/7.jpeg" alt="" className="leftbarFriendImg" />
-                                <span className="leftbarFriendName"> Mark Penny</span>
-                            </li>
-                            <li className="leftbarFriend">
-                                <img src="/assets/person/8.jpeg" alt="" className="leftbarFriendImg" />
-                                <span className="leftbarFriendName"> Glace Prue</span>
-                            </li>
-
+                           {
+                              Users.map(u=>(
+                                <LeftbarFriend key={u.id} friend={u}/>
+                              ))
+                           }
+                           
                     </ul>
                 </div>
             </div>

@@ -1,3 +1,5 @@
+import { Users } from '../../dummyData';
+import { Online } from '../online/Online';
 import './rightbar.css'
 
 export default function RightBar(){
@@ -13,55 +15,10 @@ export default function RightBar(){
                 <img src="/assets/ad.png" alt="" className="rightbarAd" />
                 <h4 className="rightbarTitle">Online Friends</h4>
                 <ul className="rightbarFriendList">
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername"> Idowu Peters</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername"> Idowu Peters</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername"> Idowu Peters</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername"> Idowu Peters</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername"> Idowu Peters</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername"> Idowu Peters</span>
-                    </li>
-                    <li className="rightbarFriend">
-                        <div className="rightbarProfileContainer">
-                            <img src="/assets/person/3.jpeg" alt="" className="rightbarProfileImg" />
-                            <span className="rightbarOnline"></span>
-                        </div>
-                        <span className="rightbarUsername"> Idowu Peters</span>
-                    </li>
+                    { Users.map(u=>(
+                        <Online key={u.id} user={u} />
+                    ))}
+                  
                 </ul>
             </div>
         </div>
